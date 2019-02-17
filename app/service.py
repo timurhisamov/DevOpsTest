@@ -28,7 +28,7 @@ def read_config():
     print("Reading config...")
     with open(app.config['config_file_uri'], 'r') as stream:
         try:
-            app.config['config'] = yaml.load("!!python/object:__main__.Config " + str(yaml.load(stream)))
+            app.config['config'] = yaml.load(f"!!python/object:__main__.Config\n{stream.read()}")
             print(app.config['config'].__repr__())
         except yaml.YAMLError as exc:
             print(exc)
