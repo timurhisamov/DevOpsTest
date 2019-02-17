@@ -1,0 +1,18 @@
+jenkins_url: 'http://jenkins.mydomain.ru'
+jenkins_user: 'user'
+jenkins_pass: 'pass123'
+jobs:
+  - job_name: 'job1'
+    projects:
+      - 'project1'
+      - 'project2'
+      - 'project3'
+  - job_name: 'job2'
+    projects:
+      - 'project4'
+      - 'project5'
+      - 'project6'
+      - 'project1'
+  - job_name: 'job3'
+    projects:
+      - 'project2'
